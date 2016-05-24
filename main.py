@@ -76,7 +76,7 @@ def listdir(dir, do):
             # print '对比结果' + str('.cfg' == os.path.splitext(line)[1])
             if os.path.splitext(line)[1] == '.cfg': # 限制仅仅处理规定后缀名的文件
                 do(filepath)
-                print('   ' + line + '已处理' + '\n')
+#                print('   ' + line + '已处理' + '\n')
                 filenum = filenum + 1
     print('共处理文件数 '+ str(filenum))
 
@@ -99,18 +99,16 @@ def main():
 *
 *         一键修改服务端ip文件
 *   by bllli https://github.com/bllli/
-* 第一次使用，请先将所有cfg文件内的公网ip修改成 "0.0.0.0"（没有引号）
-* 然后使用"./onekey.py bak"命令进行初始化
+* 第一次使用
+* *更改本文件中的路径为 你的服务端cfg文件的路径
+* *将所有 需要改公网cfg文件 内的公网ip修改成"0.0.0.0"（没有引号）
+* *然后使用"./onekey.py bak"命令进行初始化
 *\
 """
     print '*' * 60
 
-    if len(sys.argv) > 1 :
-        if sys.argv[1] == 'bak':
-            bak()
-        elif sys.argv[1] == 'res':
-            # res()
-            print '真的需要还原功能吗？'
+    if len(sys.argv) > 1 and sys.argv[1] == 'bak':
+        bak()
     change()
 
 
