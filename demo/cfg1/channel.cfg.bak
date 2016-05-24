@@ -1,0 +1,8 @@
+[server]
+max_client = 1000 
+this_ip = 0.0.0.0
+this_tcp_port = 7001
+this_udp_port = 7001
+bridge_ip = 192.168.56.10
+bridge_port = 7000
+id = 3
